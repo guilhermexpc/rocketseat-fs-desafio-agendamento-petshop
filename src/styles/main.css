@@ -1,0 +1,17 @@
+#logo {
+  display: flex;
+  width: 9.58rem;
+  gap: 2px;
+  padding: 0.75rem 1.25rem;
+  background-color: #2e2c30;
+  border-radius: 0 0 0.75rem 0;
+  color: var(--content-brand);
+  font-family: "Familjen Grotesk", sans-serif;
+  font-size: 1rem;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+header {
+  padding-top: 1.375rem;
+}

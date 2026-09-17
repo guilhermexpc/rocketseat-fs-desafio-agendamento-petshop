@@ -13,6 +13,10 @@
 }
 
 :root {
+  font-size: 100%;
+  --max-width: 24.375rem;
+  --px-bs: 2rem;
+
   /* Content */
   --content-primary: #ffffff;
   --content-secondary: #98959d;
@@ -24,6 +28,7 @@
   --background-primary: #151515;
   --background-secondary: #1e1e1e;
   --background-tertiary: #23242c;
+
   --background-brand: #9282fa;
   --background-highlights: #bdb4fa;
 
@@ -67,6 +72,7 @@
 html {
   font-family: var(--ff-inter);
   font: var(--font-p-bs);
+  color: var(--content-primary);
 }
 
 body {
@@ -127,18 +133,12 @@ div.hidden {
   display: none;
 }
 
-.label-lg {
-  font: var(--font-label-lg);
+.container {
+  width: 100%;
+  height: 100vh;
+  padding-inline: var(--px-bs);
 }
 
-.label-bs {
-  font: var(--font-label-bs);
-}
-
-.label-sm {
-  font: var(--font-label-sm);
-}
-
-.p-link {
-  font: var(--font-p-link);
+.container-base {
+  width: 100%;
 }
