@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  /* Content */
+  --content-primary: #ffffff;
+  --content-secondary: #98959d;
+  --content-tertiary: #666666;
+  --content-brand: #9282fa;
+
+  /* Background */
+  --background-body: #14151d;
+  --background-primary: #151515;
+  --background-secondary: #1e1e1e;
+  --background-tertiary: #23242c;
+  --background-brand: #9282fa;
+  --background-highlights: #bdb4fa;
+
+  /* Border */
+  --border-primary: #3e3c41;
+  --border-secondary: #86818c;
+  --border-brand: #9282fa;
+  --border-divisor: #353339;
+
+  /* Accent */
+  --accent-blue: #027df0;
+  --accent-blue-light: #16487a;
+  --accent-yellow: #f0dc02;
+  --accent-yellow-light: #756e1b;
+  --accent-orange: #f09102;
+  --accent-orange-light: #75501b;
+
+  --fs-xsm: 0.75rem; /* 12px */
+  --fs-sm: 0.875rem; /* 14px */
+  --fs-bs: 1rem; /* 16px */
+  --fs-lg: 1.5rem; /* 24px */
+
+  --fw-bs: 400;
+  --fw-bd: 700;
+
+  --ff-inter-tight: "Inter Tight", sans-serif;
+  --ff-inter: "Inter ", sans-serif;
+
+  --font-title: var(--fw-bd) var(--fs-lg) / 32px var(--ff-inter);
+
+  --font-p-bs: var(--fw-bs) var(--fs-sm) / 24px var(--ff-inter);
+  --font-p-sm: var(--fw-bs) var(--fs-xsm) / 16px var(--ff-inter);
+
+  --font-label-lg: var(--fw-bd) var(--fs-bs) / 24px var(--ff-inter);
+  --font-label-bs: var(--fw-bd) var(--fs-xsm) / 24px var(--ff-inter);
+  --font-label-sm: var(--fw-bd) var(--fs-bs) / 16px var(--ff-inter);
+
+  --font-p-link: var(--fw-bs) var(--fs-xsm) / 16px var(--ff-inter);
+}
+
+html {
+  font-family: var(--ff-inter);
+  font: var(--font-p-bs);
+}
+
+body {
+  font: var(--font-p-bs);
+  background-color: var(--background-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--content-primary);
+}
+
+h1 {
+  font: var(--font-title);
+}
+
+p {
+  font: var(--font-p-bs);
+  color: var(--content-secondary);
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul[role="list"] {
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
+div.hidden {
+  display: none;
+}
+
+.label-lg {
+  font: var(--font-label-lg);
+}
+
+.label-bs {
+  font: var(--font-label-bs);
+}
+
+.label-sm {
+  font: var(--font-label-sm);
+}
+
+.p-link {
+  font: var(--font-p-link);
+}
