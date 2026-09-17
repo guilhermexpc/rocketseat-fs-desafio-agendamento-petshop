@@ -15,3 +15,37 @@
 header {
   padding-top: 1.375rem;
 }
+
+.calendar {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem;
+  margin-top: 0.75rem;
+  gap: 0.25rem;
+  border: 1px solid var(--border-primary);
+  border-radius: 0.5rem;
+
+  input {
+    background-color: transparent;
+    font: var(--font-calendar);
+    font-size: 0.9rem;
+    line-height: 1rem;
+    color: var(--content-secondary);
+    border: none;
+    outline: none;
+  }
+
+  input[type="date"]::-webkit-datetime-edit {
+    padding: 0;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    margin-left: -0.5rem;
+    padding: 0;
+    cursor: pointer;
+    background: url("../assets/icons/checked.svg") no-repeat;
+  }
+}
