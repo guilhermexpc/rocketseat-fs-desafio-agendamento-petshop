@@ -13,6 +13,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/styles/index.css" />
+    <link rel="shortcut icon" href="src/assets/icons/logo.svg" type="image/x-icon" />
+
+    <script src="src/main.js" defer></script>
   </head>
   <body>
     <div id="logo">
@@ -83,8 +86,68 @@
     </main>
 
     <footer>
-      <button class="btn-schedule">Novo Agendamento</button>
-      <div class="schedule-buttton"></div>
+      <button class="btn-schedule-open" id="open-modal">Novo Agendamento</button>
     </footer>
+
+    <dialog id="schedule-modal">
+      <div id="logo">
+        <img src="src/assets/icons/logo.svg" alt="Logo Doguinho" />
+        <span>Mundo Pet</span>
+      </div>
+
+      <div class="schedule-container">
+        <button id="closeModal">
+          <img src="src/assets/icons/modal-close.svg" alt="" />
+        </button>
+
+        <div class="schedule-header">
+          <h2>Agende um atendimento</h2>
+          <p>Preencha os dados do cliente para realizar o agendamento:</p>
+        </div>
+
+        <form action="" class="schedule-form">
+          <label for="owner" class="label">Nome do Tutor</label>
+          <div class="input">
+            <i><img src="src/assets/icons/user-minimalitc.svg" alt="" /></i>
+            <input type="text" id="owner" placeholder="Guilherme Campos" required />
+          </div>
+
+          <label for="pet" class="label">Nome do pet</label>
+          <div class="input">
+            <i><img src="src/assets/icons/paw.svg" alt="" /></i>
+            <input type="text" id="pet" placeholder="Doguinho" required />
+          </div>
+
+          <label for="phone" class="label">Telefone</label>
+          <div class="input">
+            <i><img src="src/assets/icons/phone.svg" alt="" /></i>
+            <input type="tel" id="phone" placeholder="(99) 0 9999-9999" />
+          </div>
+
+          <label for="service" class="label">Descrição do serviços</label>
+          <div class="textarea">
+            <textarea name="" id="service" placeholder="Banho e tosa" required></textarea>
+          </div>
+
+          <label for="date" class="label">Data</label>
+          <div class="input">
+            <i>
+              <img src="src/assets/icons/calendar-minimalistic.svg" alt="" />
+            </i>
+            <input type="date" id="date" />
+          </div>
+
+          <label for="time" class="label">Hora</label>
+          <div class="input">
+            <i>
+              <img src="src/assets/icons/clock-circle.svg" alt="" />
+            </i>
+            <input type="time" id="time" />
+          </div>
+
+          <button type="submit" class="btn-default">Agendar</button>
+        </form>
+      </div>
+    </dialog>
   </body>
 </html>

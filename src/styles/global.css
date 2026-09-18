@@ -112,7 +112,8 @@ h3 {
   color: var(--content-primary);
 }
 
-h1 {
+h1,
+h2 {
   font: var(--font-title);
 }
 
