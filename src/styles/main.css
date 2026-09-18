@@ -49,3 +49,99 @@ header {
     background: url("../assets/icons/checked.svg") no-repeat;
   }
 }
+
+.cards {
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card-item {
+  width: 100%;
+  background-color: var(--background-tertiary);
+  border-radius: 0.625rem;
+
+  .card-header {
+    display: flex;
+    padding-inline: var(--card-padding);
+
+    /* align-items: center; */
+    padding-block: 0.75rem;
+    font: var(--font-label-lg);
+
+    img {
+      width: 20px;
+      height: 20px;
+      object-fit: cover;
+      margin-right: 0.75rem;
+    }
+
+    .period-title {
+      margin-right: auto;
+    }
+
+    .period-time {
+      color: var(--content-secondary);
+    }
+  }
+
+  .separator {
+    height: 1px;
+    width: 100%;
+    max-width: 375px;
+    background-color: var(--card-linebreak);
+  }
+
+  .separator-internal-container {
+    height: 20px;
+    width: 100%;
+    padding-inline: var(--card-padding);
+    margin-inline: auto;
+  }
+
+  .card-content {
+    padding-block: calc(var(--card-padding) + 0.75rem);
+    padding-block: var(--card-padding);
+    padding-inline: var(--card-padding);
+
+    .schedule-time,
+    .pet-name {
+      font: var(--font-label-bs);
+      color: var(--content-primary);
+    }
+
+    .owner-name {
+      font: var(--font-p-bs);
+      color: var(--content-secondary);
+    }
+
+    button {
+      all: unset;
+      cursor: pointer;
+      display: block;
+      font: var(--font-p-sm);
+      color: var(--content-tertiary);
+      margin-left: auto;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 1.125rem;
+  background-color: var(--background-tertiary);
+
+  .btn-schedule {
+    background-color: var(--content-brand);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font: var(--font-label-lg);
+    color: #050505;
+  }
+}
