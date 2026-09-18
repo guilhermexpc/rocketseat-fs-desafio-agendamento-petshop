@@ -17,9 +17,11 @@ header {
   padding-top: 1.375rem;
 }
 
-.cards {
+main {
   margin-top: 2rem;
-  margin-bottom: 3.5rem;
+}
+
+.cards {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -98,6 +100,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 3.5rem;
   padding-block: 1.125rem;
   background-color: var(--background-tertiary);
 
@@ -141,4 +144,30 @@ dialog {
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(1.5px);
+}
+
+@media (width >= 768px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      margin-top: 0.25rem;
+    }
+  }
+
+  main {
+    .cards {
+      margin-inline: auto;
+    }
+  }
+
+  footer {
+    justify-content: center;
+    margin-top: 0;
+    /* padding-bottom: 33px;
+    padding-inline: 30px; */
+    background-color: var(--background-body);
+  }
 }

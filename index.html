@@ -23,8 +23,10 @@
       <span>Mundo Pet</span>
     </div>
     <header class="container">
-      <h1>Sua agenda</h1>
-      <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+      <div class="header-title">
+        <h1>Sua agenda</h1>
+        <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+      </div>
       <div class="calendar">
         <img src="src/assets/icons/calendar-minimalistic.svg" alt="" />
         <input type="date" id="date" class="date" />
@@ -34,7 +36,7 @@
       <div class="cards">
         <div class="card-item">
           <div class="card-header">
-            <img src="src/assets/icons/sun-set.svg" alt="" />
+            <img src="src/assets/icons/sun-set-blue.svg" alt="" />
             <span class="period-title">Manhã</span>
             <span class="period-time">09h-12h</span>
           </div>
@@ -50,7 +52,7 @@
 
         <div class="card-item">
           <div class="card-header">
-            <img src="src/assets/icons/sun-set.svg" alt="" />
+            <img src="src/assets/icons/clound-sun-color.svg" alt="" />
             <span class="period-title">Tarde</span>
             <span class="period-time">09h-12h</span>
           </div>
@@ -78,6 +80,22 @@
             <span class="schedule-time">09:00</span>
             <span class="pet-name">Thor</span>
             <span class="owner-name">/ Fernanda costa</span>
+            <p class="schedule-description">Vacinação</p>
+            <button class="card-btn-delete">Remover agendamento</button>
+          </div>
+        </div>
+
+        <div class="card-item">
+          <div class="card-header">
+            <img src="src/assets/icons/moon-stars-color.svg" alt="" />
+            <span class="period-title">Noite</span>
+            <span class="period-time">13h-18h</span>
+          </div>
+          <div class="separator"></div>
+          <div class="card-content">
+            <span class="schedule-time">20:00</span>
+            <span class="pet-name">Max</span>
+            <span class="owner-name">/ Camila Santos</span>
             <p class="schedule-description">Vacinação</p>
             <button class="card-btn-delete">Remover agendamento</button>
           </div>

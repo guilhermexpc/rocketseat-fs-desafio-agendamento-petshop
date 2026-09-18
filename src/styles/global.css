@@ -154,3 +154,8 @@ div.hidden {
 .container-base {
   width: 100%;
 }
+@media (width >= 48em) {
+  .container {
+    max-width: 711px;
+  }
+}
