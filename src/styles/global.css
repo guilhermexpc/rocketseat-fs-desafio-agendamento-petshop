@@ -16,7 +16,8 @@
   font-size: 100%;
   --max-width: 31.25rem;
   --px-bs: 2rem;
-  --card-padding: 1.25rem;
+  --card-padding-bs: 1.25rem;
+  --card-padding-lg: 2rem;
 
   /* Content */
   --content-primary: #ffffff;

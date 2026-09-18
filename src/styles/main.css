@@ -34,10 +34,9 @@ main {
 
   .card-header {
     display: flex;
-    padding-inline: var(--card-padding);
+    padding-inline: var(--card-padding-bs);
 
-    /* align-items: center; */
-    padding-block: 0.75rem;
+    padding-block: 1rem;
     font: var(--font-label-lg);
 
     img {
@@ -65,14 +64,23 @@ main {
   .separator-internal-container {
     height: 20px;
     width: 100%;
-    padding-inline: var(--card-padding);
+    padding-inline: var(--card-separator-padding);
     margin-inline: auto;
   }
 
   .card-content {
-    padding-block: calc(var(--card-padding) + 0.75rem);
-    padding-block: var(--card-padding);
-    padding-inline: var(--card-padding);
+    padding-block: calc(var(--card-padding-lg) + 0.75rem);
+    padding-block: var(--card-padding-lg);
+    padding-inline: var(--card-padding-lg);
+
+    .card-content-info {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .schedule-description {
+      flex-basis: 100%;
+    }
 
     .schedule-time,
     .pet-name {
@@ -147,6 +155,9 @@ dialog::backdrop {
 }
 
 @media (width >= 768px) {
+  :root {
+    --card-padding-lg: 2rem;
+  }
   header {
     display: flex;
     align-items: center;
@@ -161,6 +172,33 @@ dialog::backdrop {
     .cards {
       margin-inline: auto;
     }
+
+    .card-content {
+      display: flex;
+      justify-content: space-between;
+
+      .card-content-info {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        .schedule-description {
+          flex-basis: auto;
+        }
+
+        & > span:first-child {
+          margin-right: 1rem;
+        }
+      }
+
+      .card-owner-info {
+        width: 195px;
+      }
+    }
+  }
+
+  .card-item .card-content button {
+    margin-left: 0;
   }
 
   footer {
