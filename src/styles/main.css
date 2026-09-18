@@ -76,6 +76,10 @@ main {
     .card-content-info {
       display: flex;
       flex-wrap: wrap;
+
+      & > span:first-child {
+        margin-right: 1rem;
+      }
     }
 
     .schedule-description {
