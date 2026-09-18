@@ -113,6 +113,10 @@ footer {
 }
 
 /* Estilo do container do modal */
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
 dialog {
   width: 100%;
   max-width: none;

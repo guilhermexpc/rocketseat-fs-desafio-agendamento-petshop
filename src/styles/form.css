@@ -100,8 +100,10 @@ label {
   padding: 0;
 
   textarea {
+    display: block;
     width: 100%;
     max-width: 100%;
+    min-height: 2.5rem;
     max-height: 6rem;
     align-items: center;
     padding: 0.75rem;
