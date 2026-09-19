@@ -1,4 +1,8 @@
 "use strict";
+
+import "./libs/dayjs.js";
+// import dayjs from "dayjs";
+
 import "./styles/index.css";
 
 const modal = document.getElementById("schedule-modal");
@@ -17,5 +21,9 @@ closeBtn.addEventListener("click", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
   // openBtn.click();
-  // modal.showModal();
+  modal.showModal();
 });
+
+import "./modules/page-load.js";
+import "./modules/form/form-main.js";
+import "./service/schedule-new.js";

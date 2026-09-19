@@ -27,8 +27,8 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        type: "css",
-        use: ["style-loader"]
+        type: "css"
+        // use: ["style-loader"]
       },
       {
         test: /\.(png|svg|jpe?g|gif|webp)$/i,
@@ -52,9 +52,10 @@ module.exports = {
     static: {
       directory: path.join(__dirname, outputFolder)
     },
-    compress: true,
-    port: 3004,
-    liveReload: true
+    port: 3000,
+    liveReload: true,
+    open: true
+    // compress: true,
   },
 
   plugins: [

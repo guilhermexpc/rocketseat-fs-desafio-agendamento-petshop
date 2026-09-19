@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Document</title>
+    <title>Pet Dog</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
@@ -27,9 +27,9 @@
         <h1>Sua agenda</h1>
         <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
       </div>
-      <div class="calendar">
+      <div class="calendar" id="schedule-calendar">
         <img src="./src/assets/icons/calendar-minimalistic.svg" alt="" />
-        <input type="date" id="date" class="date" />
+        <input type="date" id="search-date" class="date" />
       </div>
     </header>
     <main class="container">
@@ -157,13 +157,13 @@
           <label for="owner" class="label">Nome do Tutor</label>
           <div class="input">
             <i><img src="./src/assets/icons/user-minimalitc.svg" alt="" /></i>
-            <input type="text" id="owner" placeholder="Guilherme Campos" required />
+            <input type="text" id="owner" placeholder="Guilherme Campos" />
           </div>
 
           <label for="pet" class="label">Nome do pet</label>
           <div class="input">
             <i><img src="./src/assets/icons/paw.svg" alt="" /></i>
-            <input type="text" id="pet" placeholder="Doguinho" required />
+            <input type="text" id="pet" placeholder="Doguinho" />
           </div>
 
           <label for="phone" class="label">Telefone</label>
@@ -174,23 +174,23 @@
 
           <label for="service" class="label">Descrição do serviços</label>
           <div class="textarea">
-            <textarea name="" id="service" placeholder="Banho e tosa" required></textarea>
+            <textarea name="" id="service" placeholder="Banho e tosa"></textarea>
           </div>
 
-          <label for="date" class="label">Data</label>
+          <label for="schedule-date" class="label">Data</label>
           <div class="input">
             <i>
               <img src="./src/assets/icons/calendar-minimalistic.svg" alt="" />
             </i>
-            <input type="date" id="date" />
+            <input type="date" id="schedule-date" />
           </div>
 
-          <label for="time" class="label">Hora</label>
+          <label for="hour" class="label">Hora</label>
           <div class="input">
             <i>
               <img src="./src/assets/icons/clock-circle.svg" alt="" />
             </i>
-            <input type="time" id="time" />
+            <input type="time" id="hour" />
           </div>
 
           <button type="submit" class="btn-default">Agendar</button>

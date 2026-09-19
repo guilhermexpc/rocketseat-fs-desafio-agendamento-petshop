@@ -1,8 +1,24 @@
 {
-  "teste": [
+  "schedule": [
     {
-      "id": 1,
-      "title": "teste o testinho"
+      "id": "1",
+      "ownerName": "Guilherme",
+      "pet": "Max",
+      "phone": "9",
+      "service": "",
+      "date": "2026-09-14T21:00:00.000Z",
+      "hour": "21:00:00.000Z"
+    },
+    {
+      "id": "LpIsseP-Qbs",
+      "ownerName": "",
+      "pet": "",
+      "phone": "",
+      "service": "",
+      "date": "2026-09-11",
+      "hour": "00:45",
+      "dateFull": "2026-09-11T03:45:00.000Z"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
