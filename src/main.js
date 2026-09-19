@@ -1,3 +1,6 @@
+"use strict";
+import "./styles/index.css";
+
 const modal = document.getElementById("schedule-modal");
 const openBtn = document.getElementById("open-modal");
 const closeBtn = document.getElementById("closeModal");
