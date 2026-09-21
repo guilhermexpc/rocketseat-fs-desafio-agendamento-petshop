@@ -32,6 +32,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background: url("../assets/icons/checked.svg") no-repeat;
 }
 
+input[type="date"] {
+  color-scheme: dark;
+}
+
 input[type="time"]::-webkit-calendar-picker-indicator {
   width: 20px;
   height: 20px;
@@ -90,6 +94,31 @@ label {
 
 .input input[type="time"] {
   width: 100%;
+}
+
+.input select {
+  width: 100%;
+  padding-right: 1.5rem;
+  background: transparent url("../assets/icons/checked.svg") no-repeat right center;
+  background-size: 20px;
+  font: var(--font-calendar);
+  font-size: 1rem;
+  line-height: 1rem;
+  color: var(--content-secondary);
+  border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.input select:focus {
+  background-color: var(--background-tertiary);
+}
+
+.input select option {
+  background-color: var(--background-tertiary);
+  color: var(--content-primary);
 }
 
 .input input[type="date"] {

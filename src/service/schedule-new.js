@@ -2,14 +2,14 @@ import { apiConfig } from "../service/api-config";
 
 async function addNewSchedule({ ownerName, pet, phone, service, date, hour, dateFull }) {
   const newSchedure = {
-    id: "1",
+    id: "",
     ownerName: ownerName,
     pet: pet,
     phone: phone,
     service: service,
     date: date,
     hour: hour,
-    dateFull
+    dateFull: dateFull
   };
 
   try {
@@ -18,7 +18,8 @@ async function addNewSchedule({ ownerName, pet, phone, service, date, hour, date
       "Content-Type": "application/json",
       body: JSON.stringify(newSchedure)
     });
-    console.log("Sucesso");
+    alert("Horário agendado com sucesso");
+    console.log("Agendamento OK");
   } catch (error) {
     console.log("Error:", error);
   }
