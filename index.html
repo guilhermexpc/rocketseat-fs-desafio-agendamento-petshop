@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pet Dog</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="src/styles/index.css" /> -->
+    <link rel="shortcut icon" href="9a3be244ff0e962d1bc9.svg" type="image/x-icon" />
+
+    <!-- <script src="src/main.js" defer></script> -->
+  <link rel="icon" href="logo.svg"><script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body>
+    <div id="logo">
+      <img src="9a3be244ff0e962d1bc9.svg" alt="Logo Doguinho" />
+      <span>Mundo Pet</span>
+    </div>
+    <header class="container">
+      <div class="header-title">
+        <h1>Sua agenda</h1>
+        <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+      </div>
+      <div class="calendar" id="schedule-calendar">
+        <img src="8f70129888f4e6782b6c.svg" alt="" />
+        <input type="date" id="search-date" class="date" />
+      </div>
+    </header>
+    <main class="container">
+      <div class="cards">
+        <div class="card-item" id="period-morning">
+          <div class="card-header">
+            <img src="5ebf0fdd869feec48e10.svg" alt="" />
+            <span class="period-title">Manhã</span>
+            <span class="period-time">09h-12h</span>
+          </div>
+          <!-- <div class="separator"></div> -->
+
+          <!-- <div class="card-content">
+            <div class="card-content-info">
+              <span class="schedule-time">09:00</span>
+              <div class="card-owner-info">
+                <span class="pet-name">Thor</span>
+                <span class="owner-name">/</span>
+                <span class="owner-name">Fernanda Costa</span>
+              </div>
+              <p class="schedule-description">Vacinação</p>
+            </div>
+            <button class="card-btn-delete">Remover agendamento</button>
+          </div> -->
+        </div>
+
+        <div class="card-item" id="period-afternoon">
+          <div class="card-header">
+            <img src="3cae9e2f769a9914e3a1.svg" alt="" />
+            <span class="period-title">Tarde</span>
+            <span class="period-time">13h-18h</span>
+          </div>
+          <!-- <div class="separator"></div> -->
+
+          <!-- <div class="card-content">
+            <div class="card-content-info">
+              <span class="schedule-time">13:00</span>
+              <div class="card-owner-info">
+                <span class="pet-name">Mel</span>
+                <span class="owner-name">/</span>
+                <span class="owner-name">João Souza</span>
+              </div>
+              <p class="schedule-description">Corte de Unhas</p>
+            </div>
+            <button class="card-btn-delete">Remover agendamento</button>
+          </div>
+
+          <div class="separator-internal-container">
+            <div class="separator"></div>
+          </div>
+
+          <div class="card-content">
+            <div class="card-content-info">
+              <span class="schedule-time">14:00</span>
+              <div class="card-owner-info">
+                <span class="pet-name">Bella</span>
+                <span class="owner-name">/</span>
+                <span class="owner-name">Pedro Rocha</span>
+              </div>
+              <p class="schedule-description">Tosa Higiênica</p>
+            </div>
+            <button class="card-btn-delete">Remover agendamento</button>
+          </div>
+         -->
+        </div>
+
+        <div class="card-item" id="period-night">
+          <div class="card-header">
+            <img src="5ebf0fdd869feec48e10.svg" alt="" />
+            <span class="period-title">Noite</span>
+            <span class="period-time">19-22h</span>
+          </div>
+          <!-- <div class="separator"></div> -->
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <button class="btn-schedule-open" id="open-modal">Novo Agendamento</button>
+    </footer>
+
+    <dialog id="schedule-modal">
+      <div id="logo">
+        <img src="9a3be244ff0e962d1bc9.svg" alt="Logo Doguinho" />
+        <span>Mundo Pet</span>
+      </div>
+
+      <div class="schedule-container">
+        <button id="closeModal">
+          <img src="e51427403414077626fc.svg" alt="" />
+        </button>
+
+        <div class="schedule-header">
+          <h2>Agende um atendimento</h2>
+          <p>Preencha os dados do cliente para realizar o agendamento:</p>
+        </div>
+
+        <form action="" class="schedule-form">
+          <label for="owner" class="label">Nome do Tutor</label>
+          <div class="input">
+            <i><img src="b587ac78059fe8fbb3d0.svg" alt="" /></i>
+            <input type="text" id="owner" placeholder="Guilherme Campos" />
+          </div>
+
+          <label for="pet" class="label">Nome do pet</label>
+          <div class="input">
+            <i><img src="66e56506ff8645874346.svg" alt="" /></i>
+            <input type="text" id="pet" placeholder="Doguinho" />
+          </div>
+
+          <label for="phone" class="label">Telefone</label>
+          <div class="input">
+            <i><img src="289360876a7f72c50c29.svg" alt="" /></i>
+            <input type="tel" id="phone" placeholder="(99) 0 9999-9999" />
+          </div>
+
+          <label for="service" class="label">Descrição do serviços</label>
+          <div class="textarea">
+            <textarea name="" id="service" placeholder="Banho e tosa"></textarea>
+          </div>
+
+          <label for="schedule-date" class="label">Data</label>
+          <div class="input">
+            <i>
+              <img src="8f70129888f4e6782b6c.svg" alt="" />
+            </i>
+            <input type="date" id="schedule-date" />
+          </div>
+
+          <label for="hour" class="label">Hora</label>
+          <div class="input">
+            <i>
+              <img src="7f295fc7cde6068589a8.svg" alt="" />
+            </i>
+            <select id="hour" required disabled>
+              <option value="">Selecione um horário</option>
+              <option value="09:00">09:00</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="12:00">12:00</option>
+            </select>
+          </div>
+
+          <!-- <div class="input">
+            <i>
+              <img src="./src/assets/icons/clock-circle.svg" alt="" />
+            </i>
+            <input type="time" id="hour" min="09:00" max="22:00" step="3600" />
+          </div> -->
+
+          <button type="submit" class="btn-default">Agendar</button>
+        </form>
+      </div>
+    </dialog>
+  </body>
+</html>
