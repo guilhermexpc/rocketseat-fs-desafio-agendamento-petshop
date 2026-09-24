@@ -2,7 +2,7 @@ import dayjs from "dayjs";
 
 import { apiConfig } from "./api-config";
 
-async function scheduleFetchByDay({ date }) {
+async function scheduleHourFetchByDay({ date }) {
   try {
     const response = await fetch(apiConfig.scheduleUrl);
     const data = await response.json();
@@ -22,4 +22,23 @@ async function scheduleFetchByDay({ date }) {
   }
 }
 
-export { scheduleFetchByDay };
+async function scheduleFetchByDay({ date }) {
+  try {
+    const response = await fetch(apiConfig.scheduleUrl);
+    const data = await response.json();
+
+    // Agendamentos do dia selecionado
+    const dailySchedules = data
+      .filter((schedule) => dayjs(date).isSame(schedule.date, "day"))
+      .sort((scheduleA, scheduleB) => {
+        return new Date(scheduleA.dateFull) - new Date(scheduleB.dateFull);
+      });
+    console.log("Agendamento Carregado:", dailySchedules);
+
+    return dailySchedules;
+  } catch (error) {
+    console.log("ERROR: ", error);
+  }
+}
+
+export { scheduleHourFetchByDay, scheduleFetchByDay };

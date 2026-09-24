@@ -64,7 +64,7 @@ main {
   .separator-internal-container {
     height: 20px;
     width: 100%;
-    padding-inline: var(--card-separator-padding);
+    padding-inline: var(--card-padding-lg);
     margin-inline: auto;
   }
 

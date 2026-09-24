@@ -21,7 +21,7 @@ closeBtn.addEventListener("click", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
   // openBtn.click();
-  modal.showModal();
+  // modal.showModal();
 });
 
 import "./modules/page-load.js";

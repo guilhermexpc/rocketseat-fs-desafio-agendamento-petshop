@@ -2,7 +2,7 @@ import dayjs from "../../utils/my-dayjs.js";
 
 import { openingHours } from "../../utils/opening-hours.js";
 import { addNewSchedule } from "../../service/schedule-new";
-import { scheduleFetchByDay } from "../../service/schedule-fetch.js";
+import { scheduleHourFetchByDay } from "../../service/schedule-fetch.js";
 
 const scheduleModal = document.getElementById("schedule-modal");
 const form = document.querySelector("form");
@@ -13,7 +13,8 @@ const formService = document.getElementById("service");
 const formDate = document.getElementById("schedule-date");
 const formHour = document.getElementById("hour");
 
-// console.log(formHour);
+const today = dayjs(new Date()).format("YYYY-MM-DD");
+formDate.min = today;
 
 form.onsubmit = (event) => {
   event.preventDefault();
@@ -25,28 +26,25 @@ form.onsubmit = (event) => {
   const hour = formHour.value;
   const dateFull = dayjs(`${date} ${hour}`);
 
-  console.log(ownerName);
-  console.log(pet);
-  console.log(phone);
-  console.log(service);
-  console.log(date);
-  console.log(hour);
+  if (!validateForm({ ownerName, pet, phone, service, date, hour })) {
+    return;
+  }
 
   addNewSchedule({ ownerName, pet, phone, service, date, hour, dateFull });
+  form.reset();
+  formDate.min = today;
+  scheduleModal.close();
 };
 
 formDate.onchange = async () => {
   const date = formDate.value;
-  const scheduleHours = await scheduleFetchByDay({ date });
+  const scheduleHours = await scheduleHourFetchByDay({ date });
   console.log("Horarios marcados: ", scheduleHours);
-  if (validateForm()) {
-    return;
-  }
+
   renderHoursLoad({ date, scheduleHours });
 };
 
-function validateForm() {
-  console.log("validateForm");
+function validateForm({ ownerName, pet, phone, service, date, hour }) {
   if (!ownerName) {
     alert("Nome do cliente não foi informado");
     return false;
@@ -76,6 +74,7 @@ function validateForm() {
     alert("Por favor, selecione uma data");
     return false;
   }
+  return true;
 }
 
 function renderHoursLoad({ date, scheduleHours }) {
