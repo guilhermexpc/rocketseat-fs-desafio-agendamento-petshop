@@ -26,6 +26,7 @@ async function scheduleFetchByDay({ date }) {
   try {
     const response = await fetch(apiConfig.scheduleUrl);
     const data = await response.json();
+    console.log("schedule.date::", dayjs(date));
 
     // Agendamentos do dia selecionado
     const dailySchedules = data

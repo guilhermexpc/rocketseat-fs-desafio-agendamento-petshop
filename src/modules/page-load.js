@@ -17,6 +17,7 @@ scheduleCalendar.value = today;
 scheduleCalendar.min = today;
 
 scheduleCalendar.onchange = () => {
+  console.log("scheduleCalendar", scheduleCalendar);
   renderCards({ scheduleCalendar }, { periodMoarning, periodAfternoon, periodNight });
 };
 
